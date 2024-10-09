@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Фильтр информации" Height="400" Width="600">
+    <Grid>
+        <StackPanel Margin="10">
+            <ComboBox 
+                x:Name="FilterSelector"
+                Margin="0,0,0,10"
+                SelectionChanged="FilterSelector_SelectionChanged">
+                <ComboBoxItem Content="все" Tag="все"/>
+                <ComboBoxItem Content="недавние" Tag="недавние"/>
+                <ComboBoxItem Content="ключевое слово" Tag="ключевое слово"/>
+            </ComboBox>
+            <TextBox 
+                x:Name="KeywordTextBox" 
+                Width="200" Margin="0,0,0,10"  
+                Visibility="Collapsed"/>
+            <ListBox 
+                x:Name="ItemList" 
+                Height="200" 
+                Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
